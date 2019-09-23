@@ -1,5 +1,5 @@
 body {
-    background-image:  url("/home/james/Documents/Ip-project-wk2/amazing-animal-beautiful-beautifull.jpg");
+    background-image:  url("../images/amazing-animal-beautiful-beautifull.jpg");
     background-repeat:no repeat;
     background-size: cover;
 }
