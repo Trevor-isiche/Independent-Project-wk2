@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>project2</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+ </head>
+ <body>
+   
+  <div class="container"> 
+    <h1 style="color:blue;">Akan Names Discovery</h1><br>
+    <div class="intro">
+            <p><span style="color:rgb(255, 255, 255);font-size:20px;font-style: italic;"><strong> Aren't you interested to know the day on which you were born? and do you know about the Akan names from the Ghanian culture?
+                     In Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born
+                    This app will help you know the day on which you were born on and your Akan name together with your gender. Aren't you excited to know it?</strong> </span></p>
+                  <br>
+              </div>
+              <div class="form"> 
+                    <div class="jumbotron">
+                            <p style="font-weight:bold;text-align:center;">Do you want to know your akan name?<br>
+                             You just have to enter your the date of your birthday and your gender.</p><br>
+                            <div>
+                              <label>Month</label><br>
+                              <input type="text" id="month" placeholder="Month in number" required><br><br>
+                              <label>Day</label><br>
+                              <input type="text" id="day" placeholder="Day in number" required><br><br>
+                              <label>Year</label><br>
+                              <input type="text" id="year" placeholder="Year in number" required><br><br>
+                              <label>Gender</label><br>
+                              <input type="radio" name="gender" id="gender" value="male" checked> Male<br>
+                              <input type="radio" name="gender" value="female"> Female<br><br> 
+                              <input type="submit" value="Submit" onclick="submition()">
+                            </div>
+                            <p id="display"></p>
+                         </div>   
+                     </div>
+                     <div class="footer">
+                            <footer>
+                              <p>Copyright@2019 <strong> |</strong>isiche.trevor@gmail>com</p>                                                                                                                                  
+                            </footer>
+                          </div>
+                        <script > 
+                        function submition(){
+   /* declaration  and initialisation */
+    var month=document.getElementById("month").value;
+    var mm=parseInt(month);
+    var day=document.getElementById("day").value;
+    var dd=parseInt(day);
+    var year=document.getElementById("year").value;
+    var yy=parseInt(year);
+    var cc=(yy-1)/100+1;
+   /* the formula */
+    var result=parseInt( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd) % 7 ;
+    var boyNames=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+    var girlNames=["Akosua"," Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+    if (document.getElementById("gender").checked)
+    {
+        var gender='male';
+    }
+    else 
+   {
+      var gender='female';
