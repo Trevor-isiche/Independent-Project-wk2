@@ -1,0 +1,41 @@
+body {
+    background-image:  url("/home/james/Documents/Ip-project-wk2/amazing-animal-beautiful-beautifull.jpg");
+    background-repeat:no repeat;
+    background-size: cover;
+}
+.form {
+   margin-left: 25%;
+   margin-right: 25%;
+   color: black;
+}
+input[ type=text]{
+width: 35%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box
+
+}
+
+input[type=submit]{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: white;
+    background-color:black;
+    box-shadow: 10px 10px white #34495E;
+  }
+  .footer {
+    height: 15%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: rgb(80, 22, 22);
+    text-align: center;
+    margin-top:15%;                                                                    
+  }
+  p {
+  
+    font-size: x-large;
+  }
